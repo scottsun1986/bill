@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="alluser" extends="struts-default,json-default">
+
+
+		<global-results>
+			<result name="index">/index.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="showMsg">/showMsg.jsp</result>
+		</global-results>
+
+
+		<action name="getProdsByKey" class="action.BillManageAction" method="getProdsByKey">
+		    
+		   <result type="json">
+		       <param name="root">responseJson</param>
+		   </result>
+		</action>
+		<action name="showProd" class="action.BillManageAction" method="showProd">
+		    <result name="success">/index.jsp</result>
+		
+		</action>
+		
+		
+
+	<!-- <action name="loginn" class="action.LoginAction">
+
+		</action>
+
+		<action name="logout" class="action.LoginAction" method="out">
+
+		</action>
+	
+
+		 
+
+
+
+		<action name="switchMenu" class="action.SwitchMenuAction"
+			method="change"></action> -->	
+	
+	</package>
+	
+</struts>    

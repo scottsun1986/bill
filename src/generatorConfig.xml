@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+
+<classPathEntry  location="C:\Program Files (x86)\Java\custjar\mysql-connector-java-5.1.7-bin.jar"/> 
+  <context id="context1" >
+  <property name="mergeable" value="true"></property>
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/bill" userId="root" password="123456" />
+    <javaModelGenerator targetPackage="mybatis.model" targetProject="bill" />
+    <sqlMapGenerator targetPackage="mybatis.mapping" targetProject="bill" />
+    <javaClientGenerator targetPackage="mybatis.dao" targetProject="bill" type="XMLMAPPER" />
+ 
+    <table tableName="cust"></table>
+    <table tableName="prod"></table> 
+     <table tableName="bill"></table>
+      <table tableName="bill_detail"></table>
+       <table tableName="bill_conf"></table>
+     
+  </context>
+</generatorConfiguration>
